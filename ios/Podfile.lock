@@ -1,0 +1,54 @@
+PODS:
+  - AliPlayerSDK_iOS_ARTC (5.4.9.1):
+    - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (= 5.4.9.1)
+  - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (5.4.9.1)
+  - Flutter (1.0.0)
+  - flutter_aliplayer (0.0.1):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - RtsSDK (2.5.0)
+  - url_launcher_ios (0.0.1):
+    - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - AliPlayerSDK_iOS_ARTC (= 5.4.9.1)
+  - Flutter (from `Flutter`)
+  - flutter_aliplayer (from `.symlinks/plugins/flutter_aliplayer/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - RtsSDK (= 2.5.0)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+
+SPEC REPOS:
+  trunk:
+    - AliPlayerSDK_iOS_ARTC
+    - RtsSDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_aliplayer:
+    :path: ".symlinks/plugins/flutter_aliplayer/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+
+SPEC CHECKSUMS:
+  AliPlayerSDK_iOS_ARTC: ba767400e76e3a640396af445694450a393fd620
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_aliplayer: 8e16ca63a36208d76c3920498f81324fd2de19c9
+  path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
+  RtsSDK: b972ffcc8d8e5d9aefb6c82e08037a98b5922a3f
+  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
+
+PODFILE CHECKSUM: 8655bb06ec69ef11c88f09d94e28df538054e7bb
+
+COCOAPODS: 1.12.1
