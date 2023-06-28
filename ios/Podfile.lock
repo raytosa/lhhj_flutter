@@ -2,6 +2,8 @@ PODS:
   - AliPlayerSDK_iOS_ARTC (5.4.9.1):
     - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (= 5.4.9.1)
   - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (5.4.9.1)
+  - background_fetch (1.1.6):
+    - Flutter
   - Flutter (1.0.0)
   - flutter_aliplayer (0.0.1):
     - Flutter
@@ -16,6 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - AliPlayerSDK_iOS_ARTC (= 5.4.9.1)
+  - background_fetch (from `.symlinks/plugins/background_fetch/ios`)
   - Flutter (from `Flutter`)
   - flutter_aliplayer (from `.symlinks/plugins/flutter_aliplayer/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
@@ -29,6 +32,8 @@ SPEC REPOS:
     - RtsSDK
 
 EXTERNAL SOURCES:
+  background_fetch:
+    :path: ".symlinks/plugins/background_fetch/ios"
   Flutter:
     :path: Flutter
   flutter_aliplayer:
@@ -42,6 +47,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AliPlayerSDK_iOS_ARTC: ba767400e76e3a640396af445694450a393fd620
+  background_fetch: bc9b44b0bf8b434e282a2ac9be8662800a0296ed
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_aliplayer: 8e16ca63a36208d76c3920498f81324fd2de19c9
   path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
