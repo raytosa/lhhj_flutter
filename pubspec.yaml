@@ -44,6 +44,7 @@ dependencies:
   qr_flutter: ^4.1.0
   webview_flutter: ^4.2.2
   path_provider: ^2.0.15
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -106,3 +107,8 @@ flutter:
     - assets/images/s2.jpeg
     - assets/images/s3.jpeg
     - assets/images/s4.jpeg
+# 处理app_icon
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon/app_icon.png"

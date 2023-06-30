@@ -3,6 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
+flutter pub run flutter_launcher_icons:main
 
 This project is a starting point for a Flutter application.
 
