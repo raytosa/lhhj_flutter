@@ -28,7 +28,7 @@ class TabNavigator extends StatefulWidget {
 
 class _TabNavigatorState extends State<TabNavigator> {
   Orientation orientationF= Orientation.portrait;
-  List<String> page_label=["开奖直播","网址大全","客户端","消息","登录｜注册",];
+  List<String> page_label=["开奖直播","网址大全","客户端","消息","个人中心",];
   int _onetime = 0;
 
   final _defaultColor = Colors.grey;
@@ -56,7 +56,7 @@ class _TabNavigatorState extends State<TabNavigator> {
         mode: _mode, padding: _padding);
 
     super.initState();
-    doGetServiceAsyncStuff();
+    //doGetServiceAsyncStuff();
 
 //创建播放器
 
@@ -110,7 +110,7 @@ class _TabNavigatorState extends State<TabNavigator> {
     if (true) //(orientation != Orientation.portrait)
     {
       print('0子组件的值是: ' + orientation.toString());
-      doGetServiceAsyncStuff();
+      //doGetServiceAsyncStuff();
       return PageView(
         physics: NeverScrollableScrollPhysics(),
         onPageChanged: _pageChange,

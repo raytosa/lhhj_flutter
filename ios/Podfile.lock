@@ -2,15 +2,22 @@ PODS:
   - AliPlayerSDK_iOS_ARTC (5.4.9.1):
     - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (= 5.4.9.1)
   - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (5.4.9.1)
-  - background_fetch (1.1.6):
-    - Flutter
   - Flutter (1.0.0)
   - flutter_aliplayer (0.0.1):
     - Flutter
+  - flutter_secure_storage (6.0.0):
+    - Flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
   - RtsSDK (2.5.0)
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - Toast (4.0.0)
   - url_launcher_ios (0.0.1):
     - Flutter
   - webview_flutter_wkwebview (0.0.1):
@@ -18,11 +25,13 @@ PODS:
 
 DEPENDENCIES:
   - AliPlayerSDK_iOS_ARTC (= 5.4.9.1)
-  - background_fetch (from `.symlinks/plugins/background_fetch/ios`)
   - Flutter (from `Flutter`)
   - flutter_aliplayer (from `.symlinks/plugins/flutter_aliplayer/ios`)
+  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - RtsSDK (= 2.5.0)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
@@ -30,16 +39,21 @@ SPEC REPOS:
   trunk:
     - AliPlayerSDK_iOS_ARTC
     - RtsSDK
+    - Toast
 
 EXTERNAL SOURCES:
-  background_fetch:
-    :path: ".symlinks/plugins/background_fetch/ios"
   Flutter:
     :path: Flutter
   flutter_aliplayer:
     :path: ".symlinks/plugins/flutter_aliplayer/ios"
+  flutter_secure_storage:
+    :path: ".symlinks/plugins/flutter_secure_storage/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   url_launcher_ios:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
   webview_flutter_wkwebview:
@@ -47,11 +61,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AliPlayerSDK_iOS_ARTC: ba767400e76e3a640396af445694450a393fd620
-  background_fetch: bc9b44b0bf8b434e282a2ac9be8662800a0296ed
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_aliplayer: 8e16ca63a36208d76c3920498f81324fd2de19c9
+  flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
+  fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
   path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
   RtsSDK: b972ffcc8d8e5d9aefb6c82e08037a98b5922a3f
+  shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
   webview_flutter_wkwebview: 2e2d318f21a5e036e2c3f26171342e95908bd60a
 

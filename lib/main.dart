@@ -2,14 +2,18 @@ import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lhhj/page/login/myLoginPage.dart';
+import 'package:lhhj/page/myTest.dart';
 //import 'package:background_fetch/background_fetch.dart';
-import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'package:lhhj/util/myHttp.dart';
 
 import 'package:lhhj/util/navigation_icon_view.dart';
 
 
 void main() {
+  SharedPreferences.setMockInitialValues({});
   HttpOverrides.global = MyHttpOverrides();
   runApp(MyApp());
   // Register to receive BackgroundFetch events after app is terminated.
@@ -37,8 +41,11 @@ class _MyAppState extends State<MyApp> {
 //BackgroundFetch
 
     return MaterialApp(
+
       home:
-      TabNavigator(),//
+     // ItemsWidget(),
+      myLoginPage(loginmode: 0,title: "login", key: null,),
+      //TabNavigator(),//
 
       //myHomePage(),
       theme: ThemeData(
