@@ -219,21 +219,6 @@ class _myLoginPageState extends State<myLoginPage> {
            // api_login(loginName, loginPwd);
           rt1.then((value) {
              print('rt++= $value');
-              //navigateAfterSeconds.TabNavigator();
-              //Navigator.of(context).push(TabNavigator as String);//点击跳转界面
-            /*  Navigator //.pushAndRemoveUntil(
-                  .push(
-                context, //MaterialPageRoute配置要打开的页面、过渡动画等
-                MaterialPageRoute(
-                    builder: (context) {
-                      return TabNavigator(); //要打开的X页Widget
-                    }, //settings: "tt",            //路由界面的配置信息，如路由界面名称
-                    maintainState: true, //true是一直保存内存中,false是路由无用时释放资源
-                    fullscreenDialog: false //新路由页面是否为全屏的模态对话框
-                    ),
-              );*/
-              //   (route) => route == null);
-
               if (value == "-1") {
                 debugPrint('rt--= $value');
 
@@ -269,6 +254,20 @@ class _myLoginPageState extends State<myLoginPage> {
                     backgroundColor: Colors.grey,
                     textColor: Colors.white,
                     fontSize: 20.0);
+                //navigateAfterSeconds.TabNavigator();
+                //Navigator.of(context).push(TabNavigator as String);//点击跳转界面
+                Navigator.pushAndRemoveUntil(
+                  // .push(
+                  context, //MaterialPageRoute配置要打开的页面、过渡动画等
+                  MaterialPageRoute(
+                      builder: (context) {
+                        return TabNavigator(); //要打开的X页Widget
+                      }, //settings: "tt",            //路由界面的配置信息，如路由界面名称
+                      maintainState: true, //true是一直保存内存中,false是路由无用时释放资源
+                      fullscreenDialog: false //新路由页面是否为全屏的模态对话框
+                  ),
+               // );
+                (route) => route == null);
               }
             });
           },
