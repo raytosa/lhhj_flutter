@@ -1,15 +1,21 @@
 PODS:
+  - AliPlayerSDK_iOS (5.5.6.0):
+    - AliPlayerSDK_iOS/AliPlayerSDK (= 5.5.6.0)
+  - AliPlayerSDK_iOS/AliPlayerSDK (5.5.6.0)
   - AliPlayerSDK_iOS_ARTC (5.4.9.1):
     - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (= 5.4.9.1)
   - AliPlayerSDK_iOS_ARTC/AliPlayerSDK (5.4.9.1)
   - Flutter (1.0.0)
-  - flutter_aliplayer (0.0.1):
+  - flutter_aliplayer (5.5.6):
+    - AliPlayerSDK_iOS (= 5.5.6.0)
     - Flutter
+    - MJExtension
   - flutter_secure_storage (6.0.0):
     - Flutter
   - fluttertoast (0.0.2):
     - Flutter
     - Toast
+  - MJExtension (3.4.1)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -37,7 +43,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AliPlayerSDK_iOS
     - AliPlayerSDK_iOS_ARTC
+    - MJExtension
     - RtsSDK
     - Toast
 
@@ -60,12 +68,14 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
+  AliPlayerSDK_iOS: fa379587f1f6b9c7dc588f8328ad64f1f550b826
   AliPlayerSDK_iOS_ARTC: ba767400e76e3a640396af445694450a393fd620
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  flutter_aliplayer: 8e16ca63a36208d76c3920498f81324fd2de19c9
+  flutter_aliplayer: cf3da3d18dffe2ac1b0cef462f9dfec027a0d53c
   flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
   fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
-  path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
   RtsSDK: b972ffcc8d8e5d9aefb6c82e08037a98b5922a3f
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196

@@ -256,8 +256,8 @@ class _myLoginPageState extends State<myLoginPage> {
                     fontSize: 20.0);
                 //navigateAfterSeconds.TabNavigator();
                 //Navigator.of(context).push(TabNavigator as String);//点击跳转界面
-                Navigator.pushAndRemoveUntil(
-                  // .push(
+                Navigator//.pushAndRemoveUntil(
+                  .push(
                   context, //MaterialPageRoute配置要打开的页面、过渡动画等
                   MaterialPageRoute(
                       builder: (context) {
@@ -266,8 +266,8 @@ class _myLoginPageState extends State<myLoginPage> {
                       maintainState: true, //true是一直保存内存中,false是路由无用时释放资源
                       fullscreenDialog: false //新路由页面是否为全屏的模态对话框
                   ),
-               // );
-                (route) => route == null);
+                );
+               // (route) => route == null);
               }
             });
           },

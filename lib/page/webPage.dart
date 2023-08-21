@@ -34,11 +34,11 @@ class _webPageState extends State<webPage> {
                   primary: Colors.redAccent, // background_ onPrimary: Colors._white_,
                 ),
                 onPressed: ()  {
-                  print(_pt);
+                  debugPrint(_pt.toString());
                   setState(() {
                     if (_pt==0) {    _pt=1;  }
                     else{ _pt=0;  }
-                    print(_pt);
+                    debugPrint(_pt.toString());
                   });
                 },
                 child: Text(xz_lab[_pt],

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_aliplayer/flutter_aliplayer.dart';
 import 'package:lhhj/cfg/config.dart';
+
 //import 'package:fluttertoast/fluttertoast.dart';
 //import 'package:path_provider/path_provider.dart';
 
@@ -15,23 +16,20 @@ class SettingPage extends StatefulWidget {
 class _SettingHomePageState extends State<SettingPage> {
   TextEditingController _dnsTextEditingController = TextEditingController();
   TextEditingController _mLocalCacheDirController = TextEditingController();
-  TextEditingController _mLocalCacheMaxLocalSizeController =
-      TextEditingController();
-  TextEditingController _mLocalCacheExpirationController =
-      TextEditingController();
-  TextEditingController _mLocalCacheMaxCacheCapacityController =
-      TextEditingController();
-  TextEditingController _mLocalCacheMinDiskCapacityController =
-      TextEditingController();
-  String _sdkVersion="111";
+  TextEditingController _mLocalCacheMaxLocalSizeController = TextEditingController();
+  TextEditingController _mLocalCacheExpirationController = TextEditingController();
+  TextEditingController _mLocalCacheMaxCacheCapacityController = TextEditingController();
+  TextEditingController _mLocalCacheMinDiskCapacityController = TextEditingController();
+  String _sdkVersion = "111";
   List<String> _playerName = [];
   String _currentPlayerName = "Default";
 
   //保存地址
-  String _savePath="";
+  String _savePath = "";
+
   //iOS保存沙盒目录类型。安卓默认设置DocTypeForIOS.documents供参数传递
   DocTypeForIOS _saveDocTypeForIOS = DocTypeForIOS.documents;
-  int _mLogLevel=0;
+  int _mLogLevel = 0;
 
   @override
   void initState() {
@@ -84,8 +82,7 @@ class _SettingHomePageState extends State<SettingPage> {
     _mLocalCacheMaxLocalSizeController.text = GlobalSettings.mMaxCacheSize;
     _mLocalCacheExpirationController.text = GlobalSettings.mExpiration;
     _mLocalCacheMaxCacheCapacityController.text = GlobalSettings.mMaxCapacity;
-    _mLocalCacheMinDiskCapacityController.text =
-        GlobalSettings.mMinDiskCapacity;
+    _mLocalCacheMinDiskCapacityController.text = GlobalSettings.mMinDiskCapacity;
 
     FlutterAliplayer.getSDKVersion().then((value) {
       setState(() {
@@ -103,8 +100,7 @@ class _SettingHomePageState extends State<SettingPage> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-            left: 5.0, top: 10.0, right: 5.0, bottom: 10.0),
+        padding: const EdgeInsets.only(left: 5.0, top: 10.0, right: 5.0, bottom: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -243,8 +239,7 @@ class _SettingHomePageState extends State<SettingPage> {
             child: Text("HEVC黑名单"),
             onPressed: () {
               FlutterAliplayer.createDeviceInfo().then((value) {
-                FlutterAliplayer.addBlackDevice(
-                    FlutterAvpdef.BLACK_DEVICES_HEVC, value);
+                FlutterAliplayer.addBlackDevice(FlutterAvpdef.BLACK_DEVICES_HEVC, value);
               });
             },
           ),
@@ -255,8 +250,7 @@ class _SettingHomePageState extends State<SettingPage> {
             child: Text("H264黑名单"),
             onPressed: () {
               FlutterAliplayer.createDeviceInfo().then((value) {
-                FlutterAliplayer.addBlackDevice(
-                    FlutterAvpdef.BLACK_DEVICES_H264, value);
+                FlutterAliplayer.addBlackDevice(FlutterAvpdef.BLACK_DEVICES_H264, value);
               });
             },
           ),
@@ -381,42 +375,32 @@ class _SettingHomePageState extends State<SettingPage> {
             ElevatedButton(
               child: Text("恢复默认"),
               onPressed: () {
-                _mLocalCacheMaxLocalSizeController.text =
-                    LocalCacheDefaultValue.mDefaultMaxCacheSize;
-                _mLocalCacheExpirationController.text =
-                    LocalCacheDefaultValue.mDefaultExpiration;
-                _mLocalCacheMaxCacheCapacityController.text =
-                    LocalCacheDefaultValue.mDefaultMaxCapacity;
-                _mLocalCacheMinDiskCapacityController.text =
-                    LocalCacheDefaultValue.mDefaultMinDiskCapacity;
+                _mLocalCacheMaxLocalSizeController.text = LocalCacheDefaultValue.mDefaultMaxCacheSize;
+                _mLocalCacheExpirationController.text = LocalCacheDefaultValue.mDefaultExpiration;
+                _mLocalCacheMaxCacheCapacityController.text = LocalCacheDefaultValue.mDefaultMaxCapacity;
+                _mLocalCacheMinDiskCapacityController.text = LocalCacheDefaultValue.mDefaultMinDiskCapacity;
               },
             ),
             ElevatedButton(
               child: Text("应用配置"),
               onPressed: () {
                 GlobalSettings.mCacheDir = _mLocalCacheDirController.text;
-             //   GlobalSettings.mDocTypeForIOS = _saveDocTypeForIOS;
-                GlobalSettings.mMaxCacheSize =
-                    _mLocalCacheMaxLocalSizeController.text;
-                GlobalSettings.mExpiration =
-                    _mLocalCacheExpirationController.text;
-                GlobalSettings.mMaxCapacity =
-                    _mLocalCacheMaxCacheCapacityController.text;
-                GlobalSettings.mMinDiskCapacity =
-                    _mLocalCacheMinDiskCapacityController.text;
+                //   GlobalSettings.mDocTypeForIOS = _saveDocTypeForIOS;
+                GlobalSettings.mMaxCacheSize = _mLocalCacheMaxLocalSizeController.text;
+                GlobalSettings.mExpiration = _mLocalCacheExpirationController.text;
+                GlobalSettings.mMaxCapacity = _mLocalCacheMaxCacheCapacityController.text;
+                GlobalSettings.mMinDiskCapacity = _mLocalCacheMinDiskCapacityController.text;
 
-              /*  FlutterAliplayer.enableLocalCache(
+                /*  FlutterAliplayer.enableLocalCache(
                     GlobalSettings.mEnableLocalCache,
                     GlobalSettings.mMaxCacheSize,
                     GlobalSettings.mCacheDir,
                     GlobalSettings.mDocTypeForIOS );
 */
                 FlutterAliplayer.setCacheFileClearConfig(
-                    GlobalSettings.mExpiration,
-                    GlobalSettings.mMaxCapacity,
-                    GlobalSettings.mMinDiskCapacity);
+                    GlobalSettings.mExpiration, GlobalSettings.mMaxCapacity, GlobalSettings.mMinDiskCapacity);
 
-               // Fluttertoast.showToast(msg: "本地缓存配置成功");
+                // Fluttertoast.showToast(msg: "本地缓存配置成功");
               },
             ),
             ElevatedButton(
@@ -454,7 +438,7 @@ class _SettingHomePageState extends State<SettingPage> {
           child: Text("设置DNS"),
           onPressed: () {
             String dns = _dnsTextEditingController.text;
-            print("dns = $dns");
+            debugPrint("dns = $dns");
           },
         ),
       ],

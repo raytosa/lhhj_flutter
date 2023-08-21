@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lhhj/util/common_utils.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class myDownloadPage extends StatefulWidget{
@@ -10,9 +11,7 @@ class myDownloadPage extends StatefulWidget{
 }
 class _myDownloadPage extends State<myDownloadPage> {
   int _pt=0;
-  List<String> xz_lab=['安卓客户端下载','iOS客户端下载',];
-  List<String> xz_lab1=['点击切换iOS客户端下载','点击切换安卓客户端下载',];
-  List<String> xz_lab2=['点击切换iOS客户端下载','点击切换安卓客户端下载',];
+
   @override
   Widget build(BuildContext context) {
 
@@ -37,27 +36,27 @@ class _myDownloadPage extends State<myDownloadPage> {
                   primary: Colors.redAccent, // background_ onPrimary: Colors._white_,
                 ),
                 onPressed: ()  {
-                  print(_pt);
+                  debugPrint(_pt.toString());
                   setState(() {
                     if (_pt==0) {    _pt=1;  }
                     else{ _pt=0;  }
-                  print(_pt);
+                    debugPrint(_pt.toString());
                   });
                 },
-                child: Text(xz_lab[_pt],
+                child: Text(CommomUtils.xz_lab[_pt],
                   style: const TextStyle(  color: Colors.black,   fontSize: 20.0,   fontWeight: FontWeight.bold,  ),
                 ),
               ),
         ),
 
-          Text(xz_lab1[_pt],
+          Text(CommomUtils.xz_item[_pt],
             style: const TextStyle(  color: Colors.black,   fontSize: 14.0,   fontWeight: FontWeight.bold,  ),
           ),
               Container(
 
                 child:  QrImageView(
 
-                data: xz_lab2[_pt],
+                data: CommomUtils.xz_link[_pt],
                 size: 200,
               ),
     ),
