@@ -384,6 +384,31 @@ class _myLoginPageState extends State<myLoginPage> {
                   child: Text("还没有账号?去注册"),
                   alignment: Alignment.center,
                 )),
+            InkWell(
+                onTap: () {
+                  // _writeToStorage();
+                  /* var future = _readFromStorage();
+                  future.then((value) {
+                    print(value);
+                  }, onError: (e) {
+                    print(e);
+                  });*/
+                  debugPrint('跳过');
+                  Navigator.push(context,
+                      MaterialPageRoute(
+                          builder: (context) {
+                            return TabNavigator(); //要打开的X页Widget
+                          }, //settings: "tt",            //路由界面的配置信息，如路由界面名称
+                          maintainState: true, //true是一直保存内存中,false是路由无用时释放资源
+                          fullscreenDialog: false //新路由页面是否为全屏的模态对话框
+                      )
+                  );
+                  //  goToSignUpPage();
+                },
+                child: const Align(
+                  child: Text("跳过"),
+                  alignment: Alignment.center,
+                )),
           ],
         ),
       ),
