@@ -11,7 +11,7 @@ Future<String> dio_api_login(int action, String username, String pwd, String yzm
     debugPrint('username--:$username');
     debugPrint('password--:$pwd');
     debugPrint('emali--:$email');
-    String url = "https://103.214.175.126:6001/lhhj_/lhhj_login";
+    String url = "https://103.214.175.108:6001/lhhj_/lhhj_login";
 
     ///创建Dio
     Dio dio = new Dio();
@@ -150,7 +150,7 @@ Future<String> dio_getService() async {
   try {
     final dio = Dio();
     String url =
-        'https://103.214.175.126:6001/History_api/a6ha_GetRules'; //'''https://api.6hhj.cc/HistorySevice/GetResult';
+        'https://103.214.175.108:6001/History_api/a6ha_GetRules'; //'''https://api.6hhj.cc/HistorySevice/GetResult';
     // Future<http.Response> response = http.get( url );
     final response = await dio.get(url);
     if (response.statusCode == 200) {

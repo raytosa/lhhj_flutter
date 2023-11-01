@@ -73,7 +73,7 @@ SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_aliplayer: cf3da3d18dffe2ac1b0cef462f9dfec027a0d53c
   flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
-  fluttertoast: fafc4fa4d01a6a9e4f772ecd190ffa525e9e2d9c
+  fluttertoast: 31b00dabfa7fb7bacd9e7dbee580d7a2ff4bf265
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
   RtsSDK: b972ffcc8d8e5d9aefb6c82e08037a98b5922a3f
@@ -84,4 +84,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e5fde102c8ad9e8f21c2bf7f701fdbb452704591
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0
